@@ -15,6 +15,10 @@ let newText=text.toLowerCase()
 setText(newText)
     }
 
+const handleClear=()=>{
+  let newText=' '
+  setText(newText)
+}
     const handleOnChnage=(event)=>{
         setText(event.target.value)
     }
@@ -30,6 +34,7 @@ setText(newText)
 </div>
  <button className="btn btn-primary mx-2" onClick={handleUpClick}>Covert to Uppercase</button>
  <button className="btn btn-primary mx-2" onClick={handleLoClick}>Covert to lowerercase</button>
+ <button className="btn btn-primary mx-2" onClick={handleClear}>Clear Text</button>
     
   <div className="container my-3">
     <h1>Your text summary</h1>
