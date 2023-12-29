@@ -27,16 +27,17 @@ const handleClear=()=>{
   return ( 
     <>
      
-      <div className='conatiner'></div>
+      <div className='conatiner' style={{color:props.mode==='dark'?'white':'#042743'}}></div>
         <h1>{props.heading}</h1>
       <div className="mb-3">
-  <textarea className="form-control" value={text} onChange={handleOnChnage} rows="8" id="myBox" ></textarea>
+  <textarea className="form-control" value={text} onChange={handleOnChnage} rows="8" id="myBox" 
+  style={{backgroundColor:props.mode==='dark'?'grey':'white',color:props.mode==='dark'?'white':'#042743'}}></textarea>
 </div>
  <button className="btn btn-primary mx-2" onClick={handleUpClick}>Covert to Uppercase</button>
  <button className="btn btn-primary mx-2" onClick={handleLoClick}>Covert to lowerercase</button>
  <button className="btn btn-primary mx-2" onClick={handleClear}>Clear Text</button>
     
-  <div className="container my-3">
+  <div className="container my-3" style={{color:props.mode==='dark'?'grey':'white'}}>
     <h1>Your text summary</h1>
     <p>{text.split(' ').length} words {text.length} characters</p>
     <p>you can read it  in {0.008 * text.split(' ').length} </p>
