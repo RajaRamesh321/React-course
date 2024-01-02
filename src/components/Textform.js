@@ -37,10 +37,13 @@ const handleClear=()=>{
  <button className="btn btn-primary mx-2" onClick={handleLoClick}>Covert to lowerercase</button>
  <button className="btn btn-primary mx-2" onClick={handleClear}>Clear Text</button>
     
-  <div className="container my-3" style={{color:props.mode==='dark'?'grey':'white'}}>
+  <div className="container my-3" style={{color:props.mode==='dark'?'white':'#042743'}}>
     <h1>Your text summary</h1>
     <p>{text.split(' ').length} words {text.length} characters</p>
-    <p>you can read it  in {0.008 * text.split(' ').length} </p>
+    <p>you can read it  in {0.008 * text.split(' ').length } minutes </p>
+    <h2>Preview</h2>
+    <p>{text}</p>
+    <p>{text.length>0?text:'Enter something in the textbox above to preview it here'}</p>
   </div>
     </>
   )
